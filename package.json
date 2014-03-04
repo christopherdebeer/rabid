@@ -1,0 +1,30 @@
+{
+  "name": "your-name",
+  "version": "0.0.0",
+  "description": "Your description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "beefy app.coffee:app.js --live -- -t coffeeify -t sassify",
+    "build": "browserify ./app.coffee -t coffeeify -t sassify > ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/christopherdebeer/rabid.git"
+  },
+  "author": "Christopher de Beer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christopherdebeer/rabid/issues"
+  },
+  "homepage": "https://github.com/christopherdebeer/rabid",
+  "dependencies": {
+    "coffeeify": "~0.6.0",
+    "browserify": "~3.32.0",
+    "sassify": "~0.1.2"
+  },
+  "devDependencies": {
+    "beefy": "~1.1.0",
+    "watchify": "~0.6.1"
+  }
+}

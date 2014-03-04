@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "beefy ./assets/coffee/app.coffee:app.js --live -- -t coffeeify -t sassify",
-    "build": "browserify ./assets/coffee/app.coffee -t uglifyify -t coffeeify -t sassify > ./app.js"
+    "build": "browserify ./assets/coffee/app.coffee -t coffeeify -t sassify -t uglifyify > ./app.js"
   },
   "repository": {
     "type": "git",

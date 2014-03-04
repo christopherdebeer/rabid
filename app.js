@@ -1,49 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var $, Backbone, ExampleView, jQuery, _,
-  __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
-require('../scss/style.scss');
-
-jQuery = window.$ = $ = require('jquery');
-
-_ = require('underscore');
-
-window.Backbone = Backbone = require('backbone');
-
-Backbone.LocalStorage = require("backbone.localstorage");
-
-Backbone.$ = $;
-
-ExampleView = (function(_super) {
-  __extends(ExampleView, _super);
-
-  function ExampleView() {
-    return ExampleView.__super__.constructor.apply(this, arguments);
-  }
-
-  ExampleView.prototype.className = 'rapid-example';
-
-  ExampleView.prototype.template = "<img src=\"assets/images/icon.png\" alt=\"Rapid\" />\n<h1>Rapid Prototyping</h1>\n<p>source: <a href=\"https://github.com/christopherdebeer/rabid\">https://github.com/christopherdebeer/rabid</a></p>";
-
-  ExampleView.prototype.render = function() {
-    var _ref;
-    ExampleView.__super__.render.apply(this, arguments);
-    this.$el.html(_.template(this.template, (_ref = this.model) != null ? _ref.attributes : void 0));
-    return this;
-  };
-
-  return ExampleView;
-
-})(Backbone.View);
-
-jQuery(function() {
-  var appView;
-  console.log("RAPID Prototyping");
-  appView = new ExampleView();
-  return jQuery('body').append(appView.render().$el);
-});
-
+var $,Backbone,ExampleView,jQuery,_,__hasProp={}.hasOwnProperty,__extends=function(e,r){function t(){this.constructor=e}for(var o in r)__hasProp.call(r,o)&&(e[o]=r[o]);return t.prototype=r.prototype,e.prototype=new t,e.__super__=r.prototype,e};require("../scss/style.scss"),jQuery=window.$=$=require("jquery"),_=require("underscore"),window.Backbone=Backbone=require("backbone"),Backbone.LocalStorage=require("backbone.localstorage"),Backbone.$=$,ExampleView=function(e){function r(){return r.__super__.constructor.apply(this,arguments)}return __extends(r,e),r.prototype.className="rapid-example",r.prototype.template='<img src="assets/images/icon.png" alt="Rapid" />\n<h1>Rapid Prototyping</h1>\n<p>source: <a href="https://github.com/christopherdebeer/rabid">https://github.com/christopherdebeer/rabid</a></p>',r.prototype.render=function(){var e;return r.__super__.render.apply(this,arguments),this.$el.html(_.template(this.template,null!=(e=this.model)?e.attributes:void 0)),this},r}(Backbone.View),jQuery(function(){var e;return console.log("RAPID Prototyping"),e=new ExampleView,jQuery("body").append(e.render().$el)});
 
 },{"../scss/style.scss":2,"backbone":5,"backbone.localstorage":3,"jquery":7,"underscore":10}],2:[function(require,module,exports){
 var css = 'html, body {\
@@ -55,7 +11,7 @@ var css = 'html, body {\
     max-width: 400px;\
     padding: 2em;\
     text-align: center;\
-    margin: 2em;\
+    margin: 2em auto;\
     font-size: 1.4em; }\
 ';(require('sassify'))(css); module.exports = css;
 },{"sassify":8}],3:[function(require,module,exports){

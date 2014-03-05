@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "beefy ./assets/coffee/app.coffee:app.js --live -- -t coffeeify -t sassify",
-    "build": "browserify ./assets/coffee/app.coffee -t coffeeify -t sassify -t uglifyify > ./app.js"
+    "build": "browserify ./assets/coffee/app.coffee -t coffeeify -t sassify > ./app.js"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,9 @@
     "jquery": "~2.1.0",
     "backbone": "~1.1.2",
     "backbone.localstorage": "~1.1.7",
-    "underscore": "~1.6.0",
-    "uglifyify": "~1.2.3"
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
-    "beefy": "~1.1.0",
-    "watchify": "~0.6.1"
+    "beefy": "~1.1.0"
   }
 }
